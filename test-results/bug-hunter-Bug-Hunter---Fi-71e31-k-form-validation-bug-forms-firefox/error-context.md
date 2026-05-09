@@ -1,0 +1,314 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: bug-hunter.spec.js >> Bug Hunter - Find All Possible Bugs >> Check form validation @bug @forms
+- Location: tests\bug-hunter.spec.js:145:3
+
+# Error details
+
+```
+Error: page.$$eval: form.querySelectorAll is not a function
+@debugger eval code line 302 > eval:3:31
+evaluate@debugger eval code:304:16
+@debugger eval code:1:44
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - navigation "Global" [ref=e5]:
+        - link "side logo" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "side logo" [ref=e8]
+      - navigation [ref=e9]:
+        - list [ref=e10]:
+          - listitem [ref=e11]:
+            - button "SERVICES" [ref=e12] [cursor=pointer]:
+              - generic [ref=e13]: SERVICES
+              - img [ref=e14]
+          - listitem [ref=e17]:
+            - link "PROJECTS" [ref=e18] [cursor=pointer]:
+              - /url: /projects
+          - listitem [ref=e19]:
+            - link "ABOUT" [ref=e20] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e21]:
+            - link "CAREERS" [ref=e22] [cursor=pointer]:
+              - /url: /careers
+          - listitem [ref=e23]:
+            - link "NEWS & EVENTS" [ref=e24] [cursor=pointer]:
+              - /url: /news
+          - listitem [ref=e25]:
+            - link "LAB" [ref=e26] [cursor=pointer]:
+              - /url: /lab
+        - generic [ref=e27]:
+          - listitem [ref=e29]:
+            - button "English" [ref=e30] [cursor=pointer]:
+              - text: English
+              - img [ref=e31]
+          - link "CONTACT" [ref=e34] [cursor=pointer]:
+            - /url: /contact
+            - button "CONTACT" [ref=e35]
+  - main [ref=e36]:
+    - generic [ref=e37]:
+      - img "side-ptw" [ref=e39]
+      - img "ptw-side" [ref=e41]
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - heading "TELL US YOUR STORY" [level=3] [ref=e44]
+          - heading "您好" [level=2] [ref=e45]
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - generic [ref=e48]:
+              - generic:
+                - text: First Name
+                - img
+              - textbox [active] [ref=e49]
+              - paragraph [ref=e50]: Please enter a name consisting of three or more characters.
+            - generic [ref=e51]:
+              - generic:
+                - text: Last Name
+                - img
+              - textbox [ref=e52]
+              - paragraph [ref=e53]: Please enter a name consisting of three or more characters.
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - generic:
+                - text: Email Address
+                - img
+              - textbox [ref=e56]
+              - paragraph [ref=e57]: Please enter a valid email address.
+            - generic [ref=e58]:
+              - generic: Telephone
+              - textbox [ref=e59]
+          - generic [ref=e62] [cursor=pointer]:
+            - generic [ref=e63]: Where did you hear about us?
+            - img "side-ptw" [ref=e65]
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - generic [ref=e69] [cursor=pointer]:
+                - generic [ref=e70]:
+                  - text: Location
+                  - img [ref=e71]
+                - img "side-ptw" [ref=e74]
+              - paragraph [ref=e75]: Please select a Location.
+            - generic [ref=e76]:
+              - generic: Company / Organization
+              - textbox [ref=e77]
+          - generic [ref=e78]:
+            - generic [ref=e80] [cursor=pointer]:
+              - generic [ref=e81]:
+                - text: Which industry best describes your company?
+                - img [ref=e82]
+              - img "side-ptw" [ref=e85]
+            - paragraph [ref=e87]: Please select an industry
+          - generic [ref=e88]:
+            - generic [ref=e90] [cursor=pointer]:
+              - generic [ref=e91]:
+                - text: Nature Of Enquiry
+                - img [ref=e92]
+              - img "side-ptw" [ref=e95]
+            - paragraph [ref=e97]: Please select Nature Of Enquiry.
+          - generic [ref=e98]:
+            - generic:
+              - text: Message
+              - img
+            - textbox [ref=e99]
+            - paragraph [ref=e100]: Please enter a message consisting of twenty or more characters.
+          - generic [ref=e101]:
+            - generic [ref=e102]:
+              - checkbox "By ticking this box, I give consent to process my personal data provided in accordance with thePrivacy Policy." [ref=e103] [cursor=pointer]
+              - generic [ref=e104]:
+                - text: By ticking this box, I give consent to process my personal data provided in accordance with the
+                - link "Privacy Policy." [ref=e105] [cursor=pointer]:
+                  - /url: https://www.side.inc/privacy-policy
+            - paragraph [ref=e107]: Please agree to the Privacy Policy.
+          - generic [ref=e109]:
+            - iframe [ref=e115]:
+              - generic [ref=f1e2]:
+                - generic [ref=f1e3]:
+                  - checkbox "I'm not a robot" [ref=f1e7]
+                  - generic [ref=f1e11]: I'm not a robot
+                - generic [ref=f1e15]: reCAPTCHA
+            - button "Submit" [ref=e117] [cursor=pointer]
+          - paragraph [ref=e119]: Please Validate CAPTCHA
+    - generic [ref=e120]:
+      - img "ptw-side" [ref=e121]
+      - generic [ref=e123]:
+        - heading "OUR LOCATIONS" [level=2] [ref=e124]
+        - generic [ref=e125]:
+          - generic [ref=e126]:
+            - heading "EUROPE" [level=3] [ref=e127]
+            - button [ref=e128] [cursor=pointer]:
+              - img [ref=e129]
+          - separator [ref=e132]
+          - generic [ref=e134]:
+            - generic [ref=e136]:
+              - generic [ref=e137]:
+                - img "side-ptw" [ref=e138]
+                - generic [ref=e140]:
+                  - button [disabled] [ref=e141]:
+                    - img [ref=e142]
+                  - button [ref=e145] [cursor=pointer]:
+                    - img [ref=e146]
+              - generic [ref=e149]:
+                - heading "PARIS" [level=3] [ref=e150]
+                - paragraph [ref=e151]: "72 Rue Sadi Carnot 92170 Vanves France. Phone: +33 7 83 41 05 73"
+            - generic [ref=e153]:
+              - generic [ref=e154]:
+                - img "side-ptw" [ref=e155]
+                - generic [ref=e157]:
+                  - button [disabled] [ref=e158]:
+                    - img [ref=e159]
+                  - button [ref=e162] [cursor=pointer]:
+                    - img [ref=e163]
+              - generic [ref=e166]:
+                - heading "LONDON" [level=3] [ref=e167]
+                - paragraph [ref=e168]: "Unit A12, Tileyard London, 105 Blundell Street - King's Cross, London N7 9BN, United Kingdom. Phone: +44 (0)20 76 314 800"
+            - generic [ref=e170]:
+              - generic [ref=e171]:
+                - img "side-ptw" [ref=e172]
+                - generic [ref=e174]:
+                  - button [disabled] [ref=e175]:
+                    - img [ref=e176]
+                  - button [ref=e179] [cursor=pointer]:
+                    - img [ref=e180]
+              - generic [ref=e183]:
+                - heading "BRAGA" [level=3] [ref=e184]
+                - paragraph [ref=e185]: Centro Empresarial de Ferreiros, Rua Professor Henrique Barros Lote B5, 4705-319 Ferreiros, Braga, Portugal
+        - generic [ref=e186]:
+          - generic [ref=e187]:
+            - heading "ASIA" [level=3] [ref=e188]
+            - button [ref=e189] [cursor=pointer]:
+              - img [ref=e190]
+          - separator [ref=e193]
+        - generic [ref=e194]:
+          - generic [ref=e195]:
+            - heading "NORTH AMERICA" [level=3] [ref=e196]
+            - button [ref=e197] [cursor=pointer]:
+              - img [ref=e198]
+          - separator [ref=e201]
+        - generic [ref=e202]:
+          - generic [ref=e203]:
+            - heading "SOUTH AMERICA" [level=3] [ref=e204]
+            - button [ref=e205] [cursor=pointer]:
+              - img [ref=e206]
+          - separator [ref=e209]
+      - generic [ref=e211]:
+        - img "ptw-side" [ref=e213]
+        - generic [ref=e214]:
+          - link "side-ptw" [ref=e216] [cursor=pointer]:
+            - /url: /
+            - img "side-ptw" [ref=e217]
+          - generic [ref=e219]:
+            - list [ref=e221]:
+              - separator [ref=e222]
+              - listitem [ref=e223]:
+                - link "PROJECTS" [ref=e224] [cursor=pointer]:
+                  - /url: /projects
+              - listitem [ref=e225]:
+                - link "ABOUT" [ref=e226] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e227]:
+                - link "CAREERS" [ref=e228] [cursor=pointer]:
+                  - /url: /careers
+              - listitem [ref=e229]:
+                - link "NEWS & EVENTS" [ref=e230] [cursor=pointer]:
+                  - /url: /news
+              - listitem [ref=e231]:
+                - link "LAB" [ref=e232] [cursor=pointer]:
+                  - /url: /lab
+            - generic [ref=e233]:
+              - paragraph [ref=e234]: SERVICES
+              - list [ref=e235]:
+                - listitem [ref=e236]:
+                  - link "GAME DEVELOPMENT" [ref=e237] [cursor=pointer]:
+                    - /url: /services/game-development
+                - listitem [ref=e238]:
+                  - link "QUALITY ASSURANCE" [ref=e239] [cursor=pointer]:
+                    - /url: /services/quality-assurance
+                - listitem [ref=e240]:
+                  - link "ART PRODUCTION" [ref=e241] [cursor=pointer]:
+                    - /url: /services/art-production
+                - listitem [ref=e242]:
+                  - link "LOCALIZATION" [ref=e243] [cursor=pointer]:
+                    - /url: /services/localization
+                - listitem [ref=e244]:
+                  - link "AUDIO PRODUCTION" [ref=e245] [cursor=pointer]:
+                    - /url: /services/audio-production
+                - listitem [ref=e246]:
+                  - link "PLAYER SUPPORT" [ref=e247] [cursor=pointer]:
+                    - /url: /services/player-support
+                - listitem [ref=e248]:
+                  - link "LOCALIZATION QA" [ref=e249] [cursor=pointer]:
+                    - /url: /services/localization-qa
+                - listitem [ref=e250]:
+                  - link "DATASETS" [ref=e251] [cursor=pointer]:
+                    - /url: /services/datasets
+                - listitem [ref=e252]:
+                  - link "IT" [ref=e253] [cursor=pointer]:
+                    - /url: /services/it-services
+        - generic [ref=e254]:
+          - generic [ref=e256]:
+            - heading "SHOUT OUT!" [level=3] [ref=e257]
+            - link "GET IN TOUCH" [ref=e260] [cursor=pointer]:
+              - /url: /contact
+            - generic [ref=e261]:
+              - link [ref=e262] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/sideglobal
+                - img [ref=e263]
+              - link [ref=e269] [cursor=pointer]:
+                - /url: https://www.instagram.com/sideglobal
+                - img [ref=e270]
+              - link [ref=e274] [cursor=pointer]:
+                - /url: https://www.youtube.com/@sideglobal
+                - img [ref=e275]
+              - link [ref=e278] [cursor=pointer]:
+                - /url: https://x.com/sideglobal
+                - img [ref=e279]
+              - link [ref=e281] [cursor=pointer]:
+                - /url: https://www.artstation.com/sideglobal
+                - img [ref=e282]
+          - generic [ref=e287]:
+            - paragraph [ref=e288]:
+              - link "CSR POLICY (INDIA)" [ref=e289] [cursor=pointer]:
+                - /url: /Corporate Social Responsibility_V6.pdf
+            - paragraph [ref=e290]:
+              - link "TERMS OF USE" [ref=e291] [cursor=pointer]:
+                - /url: https://side.inc/website-terms-of-usage
+            - paragraph [ref=e292]:
+              - link "PRIVACY POLICY" [ref=e293] [cursor=pointer]:
+                - /url: https://side.inc/privacy-policy
+            - paragraph [ref=e294]:
+              - link "POLICIES" [ref=e295] [cursor=pointer]:
+                - /url: https://side.inc/modern-slavery-statement
+            - paragraph [ref=e296]:
+              - link "POLE TO WIN HOLDINGS" [ref=e297] [cursor=pointer]:
+                - /url: https://www.phd.inc/en/index.html
+            - paragraph [ref=e298]: © SIDE 2026. ALL RIGHTS RESERVED.
+  - region "Notifications Alt+T"
+  - generic [ref=e300]:
+    - generic [ref=e301]:
+      - img "side-ptw" [ref=e302]
+      - paragraph [ref=e304]:
+        - text: Our website uses cookies. By continuing, we assume your permission to deploy cookies as detailed in our
+        - link "Privacy Policy" [ref=e305] [cursor=pointer]:
+          - /url: /privacy-policy
+    - generic [ref=e307]:
+      - button "ACCEPT ALL" [ref=e308] [cursor=pointer]:
+        - text: ACCEPT ALL
+        - img [ref=e309]
+      - button "DECLINE" [ref=e311] [cursor=pointer]:
+        - generic [ref=e312]: DECLINE
+      - button "Video preview" [ref=e313] [cursor=pointer]:
+        - img "Video preview" [ref=e314]
+```
