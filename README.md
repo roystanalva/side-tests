@@ -1,4 +1,4 @@
-# Side Tests
+# Side.inc Tests
 
 A QA test automation project for validating SIDE.INC web application through structured manual and automated testing. This repository is used to organize test assets, scripts, documentation, and reports in one place.
 
